@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <title>AK.com</title>
+        <link rel='stylesheet' href='css/bootstrap.css'/>
+        <link rel='stylesheet' href='css/style.css'/>
+        <link href='http://fonts.googleapis.com/css?family=Gabriela' rel='stylesheet' type='text/css'/>
+        <!--[if lt IE 9]>
+          <script src="js/html5shiv.min.js"></script>
+          <script src="js/respond.min.js"></script>
+        <![endif]-->
+    </h:head>
+    <h:body>
+        <!--Start of navBar-->
+        <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+            <div class="container-fluid">
+                <!-- mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!-- Brand -->
+                    <a class="navbar-brand" href="index.xhtml"><img src="images/brand.png" class="img-responsive" width="150" height="auto"/></a>
+                </div>
+
+                <!-- Left links -->
+                <ul class="nav navbar-nav navbar-left navbtn">
+                    <h:form>
+                        <h:commandButton action="#{logoutBean.logout(sessionScope['userId'])}" class="btn btn-default navbar-btn btn-info loginbtn" value="Logout"/>
+                    </h:form>
+                </ul>
+                <!-- contact area -->
+                <ul class="nav navbar-nav navbar-right">
+                    <img src="images/contact.png" class="navimg"/>
+                </ul>
+                <!-- Right links -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                </div>
+            </div><!-- /.container-fluid -->
+        </nav><!-- End of navBar-->
+
+        <!-- Start of Device -->
+        <div class="container">
+            <div class="row top-space">
+                <h:form>
+                    <div class="col-lg-10">
+                        <div class="form-group">
+                            <h:outputText value="#{bill.getEmail(userId)}"/>
+                            <h:inputText style="margin-bottom: 10px" class="form-control input-lg" p:placeholder="enter visa number here" value="#{bill.visa}"/>
+                            <h:inputText class="form-control input-lg" p:placeholder="Write Your Address Here" value="#{bill.address}"/>
+                            <h:commandButton action="#{bill.insertBill(sessionScope['userId'],sessionScope['userEmail'])}" value="Done" class="btn btn-default navbar-btn btn-danger input-lg form-control"/>
+                        </div>
+                        <h3>
+                            We will call you when your order is delivered. 
+                        </h3>
+                    </div>
+                    <div class="col-lg-2">
+                       
+                    </div>
+                </h:form>
+            </div>
+        </div><!-- End Row -->
+        <!-- End Container -->
+
+        <!--include script files-->
+        <script src="js/jquery-1.11.3.min.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+    </h:body>
+</html>
+

@@ -1,0 +1,103 @@
+body
+{
+	font-family: 'Gabriela', serif; 
+	background-image: url("../images/bodybg.jpg")
+}
+
+
+
+/* Start of navBar */
+.navbar-fixed-top .navbar-collapse, .navbar-static-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse
+{
+	margin-bottom:50px;
+}
+.container-fluid
+{
+	background-color: #000;
+}
+.navbtn
+{
+	margin-left: 400px;
+    margin-top: 25px;
+    margin-bottom: -50px;
+}
+.navbar-right .navimg
+{
+	margin-right: 32px;
+    margin-bottom: -37px;
+    margin-top: 13px;
+}
+.navbar-btn
+{
+	border-radius: 0px;
+}
+
+
+/* Start Register Div Style */
+.regist
+{
+	width:600px;
+	margin-left:380px;
+	margin-right:300px;
+	margin-top:150px;
+	padding:50px;
+	position: absolute;
+	background-image: url("../images/registbg.jpg");
+}
+.regist .form-control, .regist .btn
+{
+	border-radius:0px;
+	opacity: 0.8;
+	border: 0;
+}
+
+
+/* Start of Log in Div Style */
+.login
+{
+	width:600px;
+	margin-left:380px;
+	margin-right:300px;
+	margin-top:200px;
+	padding:50px;
+	position: absolute;
+	background-image: url("../images/login.jpg"); 
+}
+.login .form-control, .login .btn
+{
+	border-radius:0px;
+	opacity: 0.8;
+	border: 0;
+}
+
+
+
+/* Start of Banner Div Style */
+.welcome
+{
+	background-image: url("../images/welcome.png");
+	width:1100px;
+	height:640px;
+}
+
+
+/* Start of Device Div Style */
+.top-space
+{
+	margin-top: 150px;
+	margin-left: 50px;
+}
+.device
+{
+	border: 1px solid #000;
+	height: 300px;
+	width: 250px;
+	margin: 5px;
+	padding: 20px;
+	background-color: #fff;
+}
+.mobile
+{
+	width: 180px;
+	height: auto;
+}
